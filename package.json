@@ -1,0 +1,26 @@
+{
+  "name": "ayax-common-operation",
+  "version": "1.0.7",
+  "description": "OperationResult response-based async service",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayaxdeveloper/ayax-common-operation.git"
+  },
+  "author": "ayaxdeveloper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayaxdeveloper/ayax-common-operation/issues"
+  },
+  "homepage": "https://github.com/ayaxdeveloper/ayax-common-operation#readme",
+  "dependencies": {
+    "ayax-common-types": "^3.0.1"
+  },
+  "devDependencies": {}
+}
