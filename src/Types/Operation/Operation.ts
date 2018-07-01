@@ -12,7 +12,7 @@ export class Operation implements IOperation {
     }
 
     ensureSuccess(args? : IEnsureSuccessParameters): Operation {
-        if(this.status == 0) {
+        if(this.status === 0) {
             if(args && args.onSuccess) {
                 args.onSuccess(this.message);
             }

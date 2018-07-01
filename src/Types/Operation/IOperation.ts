@@ -4,5 +4,5 @@ import { IEnsureSuccessParameters } from "../EnsureSuccess/IEnsureSuccessParamet
 export interface IOperation {
     message: string;
     status: OperationStatus;
-    ensureSuccess(args? : IEnsureSuccessParameters): IOperation
+    ensureSuccess(args? : IEnsureSuccessParameters): IOperation;
 }

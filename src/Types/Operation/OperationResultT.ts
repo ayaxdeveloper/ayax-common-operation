@@ -12,7 +12,7 @@ export class OperationResult<T> {
     }
 
     ensureSuccess = (args? : IEnsureSuccessParameters): T => {
-        if(this.status == 0) {
+        if(this.status === 0) {
             if(args && args.onSuccess) {
                 args.onSuccess(this.message);
             }
