@@ -1,5 +1,5 @@
-import { OperationStatus } from "./OperationStatus";
 import { IEnsureSuccessParameters } from "../EnsureSuccess/IEnsureSuccessParameters";
+import { OperationStatus } from "./OperationStatus";
 
 export interface IOperationResult<T> {
     result: T;

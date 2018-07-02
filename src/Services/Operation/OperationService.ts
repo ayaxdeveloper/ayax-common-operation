@@ -1,9 +1,9 @@
-import { IOperationService } from "../../Types/OperationService/IOperationService";
-import { OperationResult } from "../../Types/Operation/OperationResultT";
-import { Operation } from "../../Types/Operation/Operation";
-import { IOperationResult } from "../../Types/Operation/IOperationResultT";
-import { IOperation } from "../../Types/Operation/IOperation";
 import { IHttpService } from "ayax-common-types";
+import { IOperation } from "../../Types/Operation/IOperation";
+import { IOperationResult } from "../../Types/Operation/IOperationResultT";
+import { Operation } from "../../Types/Operation/Operation";
+import { OperationResult } from "../../Types/Operation/OperationResultT";
+import { IOperationService } from "../../Types/OperationService/IOperationService";
 
 export class OperationService implements IOperationService {
     _http: IHttpService;
@@ -12,7 +12,7 @@ export class OperationService implements IOperationService {
     constructor(http: IHttpService, postFix?: string) {
         this._http = http;
         this.baseUrl = http.baseUrl;
-        if(postFix) {
+        if (postFix) {
             this._postFix = postFix;
         }
     }
@@ -32,7 +32,7 @@ export class OperationService implements IOperationService {
             return new Operation(result);
     }
     async delete<T>(url: any, data?: any): Promise<IOperation> {
-        if(data) {
+        if (data) {
             const dataResult = await this._http.delete(url, data);
             return new Operation(dataResult);
         }

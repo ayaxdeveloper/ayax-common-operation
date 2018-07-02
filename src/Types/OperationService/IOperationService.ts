@@ -1,5 +1,5 @@
-import { IOperationResult } from "../Operation/IOperationResultT";
 import { IOperation } from "../Operation/IOperation";
+import { IOperationResult } from "../Operation/IOperationResultT";
 
 export interface IOperationService {
     baseUrl: string;
