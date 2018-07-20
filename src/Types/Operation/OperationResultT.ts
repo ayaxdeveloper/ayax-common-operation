@@ -5,6 +5,7 @@ export class OperationResult<T> {
     result: T;
     message: string;
     status: OperationStatus;
+    exceptions: any;
     constructor(init?: Partial<OperationResult<T>>) {
         if (init) {
             Object.assign(this, init);

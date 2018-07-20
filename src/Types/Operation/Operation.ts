@@ -5,6 +5,7 @@ import { OperationStatus } from "./OperationStatus";
 export class Operation implements IOperation {
     message: string;
     status: OperationStatus;
+    exceptions: any;
     constructor(init?: Partial<Operation>) {
         if (init) {
             Object.assign(this, init);

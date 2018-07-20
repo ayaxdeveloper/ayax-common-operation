@@ -1,6 +1,6 @@
 {
   "name": "ayax-common-operation",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "OperationResult response-based async service",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
