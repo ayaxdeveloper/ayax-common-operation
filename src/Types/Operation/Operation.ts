@@ -1,3 +1,4 @@
+import { CustomErrorHandler } from "../../Helpers/CustomErrorHandler";
 import { IEnsureSuccessParameters } from "../EnsureSuccess/IEnsureSuccessParameters";
 import { IOperation } from "./IOperation";
 import { OperationStatus } from "./OperationStatus";
@@ -28,7 +29,7 @@ export class Operation implements IOperation {
             if (args && args.onDone) {
                 args.onDone();
             }
-            throw new Error(this.message);
+            throw CustomErrorHandler.FromOperation(this);
         }
     }
 }

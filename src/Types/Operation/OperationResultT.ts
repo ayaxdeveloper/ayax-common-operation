@@ -1,3 +1,4 @@
+import { CustomErrorHandler } from "../../Helpers/CustomErrorHandler";
 import { IEnsureSuccessParameters } from "../EnsureSuccess/IEnsureSuccessParameters";
 import { OperationStatus } from "./OperationStatus";
 
@@ -12,7 +13,7 @@ export class OperationResult<T> {
         }
     }
 
-    ensureSuccess = (args? : IEnsureSuccessParameters): T => {
+    ensureSuccess(args? : IEnsureSuccessParameters): T {
         if (this.status === 0) {
             if (args && args.onSuccess) {
                 args.onSuccess(this.message);
@@ -28,7 +29,7 @@ export class OperationResult<T> {
             if (args && args.onDone) {
                 args.onDone();
             }
-            throw new Error(this.message);
+            throw CustomErrorHandler.FromOperation(this);
         }
     }
 }
