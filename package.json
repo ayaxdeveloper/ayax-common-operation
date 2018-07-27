@@ -1,6 +1,6 @@
 {
   "name": "ayax-common-operation",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "OperationResult response-based async service",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/ayaxdeveloper/ayax-common-operation#readme",
   "dependencies": {
-    "ayax-common-types": "^3.0.1"
+    "ayax-common-types": "^3.0.15"
   },
   "devDependencies": {}
 }
