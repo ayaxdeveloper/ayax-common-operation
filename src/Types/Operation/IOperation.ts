@@ -5,5 +5,5 @@ export interface IOperation {
     message: string;
     status: OperationStatus;
     exceptions: any;
-    ensureSuccess(args? : IEnsureSuccessParameters): IOperation;
+    ensureSuccess(): IOperation;
 }

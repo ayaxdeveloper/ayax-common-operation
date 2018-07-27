@@ -13,22 +13,10 @@ export class Operation implements IOperation {
         }
     }
 
-    ensureSuccess(args? : IEnsureSuccessParameters): Operation {
+    ensureSuccess(): Operation {
         if (this.status === 0) {
-            if (args && args.onSuccess) {
-                args.onSuccess(this.message);
-            }
-            if (args && args.onDone) {
-                args.onDone();
-            }
             return this;
         } else {
-            if (args && args.onError) {
-                args.onError(this.message);
-            } 
-            if (args && args.onDone) {
-                args.onDone();
-            }
             throw CustomErrorHandler.FromOperation(this);
         }
     }
