@@ -4,6 +4,8 @@ import { IOperationResult } from "../../Types/Operation/IOperationResultT";
 import { Operation } from "../../Types/Operation/Operation";
 import { OperationResult } from "../../Types/Operation/OperationResultT";
 import { IOperationService } from "../../Types/OperationService/IOperationService";
+import { ISearchResponseOperationResult } from "./../../Types/Operation/ISearchResponseOperationResultT";
+import { SearchResponseOperationResult } from "./../../Types/Operation/SearchResponseOperationResultT";
 
 export class OperationService implements IOperationService {
     _http: IHttpService;
@@ -38,5 +40,10 @@ export class OperationService implements IOperationService {
         }
         const result = await this._http.delete(url);
         return new Operation(result);
+    }
+
+    async search<T>(url: string, data: any): Promise<ISearchResponseOperationResult<T>> {
+        const result = await this._http.post(url, data);
+        return new SearchResponseOperationResult<T>(result);
     }
 }

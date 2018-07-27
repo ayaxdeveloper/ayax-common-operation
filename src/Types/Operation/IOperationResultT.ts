@@ -1,4 +1,3 @@
-import { IEnsureSuccessParameters } from "../EnsureSuccess/IEnsureSuccessParameters";
 import { OperationStatus } from "./OperationStatus";
 
 export interface IOperationResult<T> {
@@ -6,5 +5,5 @@ export interface IOperationResult<T> {
     message: string;
     status: OperationStatus;
     exceptions: any;
-    ensureSuccess(args? : IEnsureSuccessParameters): T;
+    ensureSuccess(mapping?: (result: T) => T): T;
 }

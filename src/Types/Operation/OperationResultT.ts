@@ -13,22 +13,14 @@ export class OperationResult<T> {
         }
     }
 
-    ensureSuccess(args? : IEnsureSuccessParameters): T {
+    ensureSuccess(mapping?: (result: T) => T): T {
         if (this.status === 0) {
-            if (args && args.onSuccess) {
-                args.onSuccess(this.message);
+            if (mapping) {
+                return mapping(<T> this.result);
+            } else {
+                return this.result;
             }
-            if (args && args.onDone) {
-                args.onDone();
-            }
-            return this.result;
         } else {
-            if (args && args.onError) {
-                args.onError(this.message);
-            } 
-            if (args && args.onDone) {
-                args.onDone();
-            }
             throw CustomErrorHandler.FromOperation(this);
         }
     }
