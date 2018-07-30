@@ -1,6 +1,6 @@
 import { Operation } from "../Types/Operation/Operation";
 import { OperationResult } from "../Types/Operation/OperationResultT";
-import { SearchResponseOperationResult } from "./../Types/Operation/SearchResponseOperationResultT";
+import { SearchResponseOperationResult } from "../Types/Operation/SearchResponseOperationResultT";
 export class CustomErrorHandler {
     static FromOperation<T>(operation: Operation | OperationResult<T> | SearchResponseOperationResult<T>) : Error {
         console.error(`Error: ${operation.message}`);

@@ -1,11 +1,11 @@
 import { IHttpService } from "ayax-common-types";
 import { IOperation } from "../../Types/Operation/IOperation";
 import { IOperationResult } from "../../Types/Operation/IOperationResultT";
+import { ISearchResponseOperationResult } from "../../Types/Operation/ISearchResponseOperationResultT";
 import { Operation } from "../../Types/Operation/Operation";
 import { OperationResult } from "../../Types/Operation/OperationResultT";
+import { SearchResponseOperationResult } from "../../Types/Operation/SearchResponseOperationResultT";
 import { IOperationService } from "../../Types/OperationService/IOperationService";
-import { ISearchResponseOperationResult } from "./../../Types/Operation/ISearchResponseOperationResultT";
-import { SearchResponseOperationResult } from "./../../Types/Operation/SearchResponseOperationResultT";
 
 export class OperationService implements IOperationService {
     _http: IHttpService;

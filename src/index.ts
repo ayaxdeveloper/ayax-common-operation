@@ -7,4 +7,4 @@ export * from "./Types/Operation/OperationResultT";
 export * from "./Types/Operation/OperationStatus";
 export * from "./Types/EnsureSuccess/IEnsureSuccessParameters";
 export * from "./Types/HttpService/IHttpServiceParameters";
-export * from "./Services/BaseWithOperation/BaseWithOperationService";
+export * from "./Services/WithOperation/WithOperationBase";

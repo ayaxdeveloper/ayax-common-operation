@@ -1,6 +1,6 @@
 import { IOperation } from "../Operation/IOperation";
 import { IOperationResult } from "../Operation/IOperationResultT";
-import { ISearchResponseOperationResult } from "./../Operation/ISearchResponseOperationResultT";
+import { ISearchResponseOperationResult } from "../Operation/ISearchResponseOperationResultT";
 
 export interface IOperationService {
     baseUrl: string;
