@@ -1,7 +1,8 @@
 import { CustomErrorHandler } from "../../Helpers/CustomErrorHandler";
+import { ISearchResponseOperationResult } from "./ISearchResponseOperationResultT";
 import { OperationStatus } from "./OperationStatus";
 
-export class SearchResponseOperationResult<T> {
+export class SearchResponseOperationResult<T> implements ISearchResponseOperationResult<T> {
     result: {
         data: T;
         total: number;

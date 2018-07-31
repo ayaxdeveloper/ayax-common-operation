@@ -1,8 +1,8 @@
 import { CustomErrorHandler } from "../../Helpers/CustomErrorHandler";
-import { IEnsureSuccessParameters } from "../EnsureSuccess/IEnsureSuccessParameters";
+import { IOperationResult } from "./IOperationResultT";
 import { OperationStatus } from "./OperationStatus";
 
-export class OperationResult<T> {
+export class OperationResult<T> implements IOperationResult<T> {
     result: T;
     message: string;
     status: OperationStatus;

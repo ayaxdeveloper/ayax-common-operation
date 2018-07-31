@@ -1,6 +1,7 @@
+import { IOperation } from "./IOperation";
 import { OperationStatus } from "./OperationStatus";
 
-export interface ISearchResponseOperationResult<T> {
+export interface ISearchResponseOperationResult<T> extends IOperation {
     result: {
         data: T;
         total: number;
