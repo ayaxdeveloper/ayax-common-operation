@@ -8,6 +8,7 @@ export interface ISearchResponseOperationResult<T> extends IOperation {
     };
     message: string;
     status: OperationStatus;
+    systemMessage: string;
     exceptions: any;
     ensureSuccess(mapping?: (result: T) => T): {data: T, total: number};
 }

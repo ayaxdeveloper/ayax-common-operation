@@ -3,13 +3,14 @@ import { ISearchResponseOperationResult } from "./ISearchResponseOperationResult
 import { OperationStatus } from "./OperationStatus";
 
 export class SearchResponseOperationResult<T> implements ISearchResponseOperationResult<T> {
+    exceptions: any;
+    systemMessage: string;
     result: {
         data: T;
         total: number;
     };
     message: string;
     status: OperationStatus;
-    exceptions: any;
     constructor(init?: Partial<SearchResponseOperationResult<T>>) {
         if (init) {
             Object.assign(this, init);

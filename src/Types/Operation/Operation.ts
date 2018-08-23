@@ -1,12 +1,13 @@
 import { CustomErrorHandler } from "../../Helpers/CustomErrorHandler";
-import { IEnsureSuccessParameters } from "../EnsureSuccess/IEnsureSuccessParameters";
 import { IOperation } from "./IOperation";
 import { OperationStatus } from "./OperationStatus";
 
 export class Operation implements IOperation {
+    exceptions: any;
+    systemMessage: string;
     message: string;
     status: OperationStatus;
-    exceptions: any;
+
     constructor(init?: Partial<Operation>) {
         if (init) {
             Object.assign(this, init);

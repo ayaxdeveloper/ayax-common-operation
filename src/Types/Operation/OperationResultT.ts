@@ -3,10 +3,11 @@ import { IOperationResult } from "./IOperationResultT";
 import { OperationStatus } from "./OperationStatus";
 
 export class OperationResult<T> implements IOperationResult<T> {
+    exceptions: any;
+    systemMessage: string;
     result: T;
     message: string;
     status: OperationStatus;
-    exceptions: any;
     constructor(init?: Partial<OperationResult<T>>) {
         if (init) {
             Object.assign(this, init);
